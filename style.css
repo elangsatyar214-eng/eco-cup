@@ -372,8 +372,8 @@ footer {
 }
 /* ================= CONTACT SECTION ================= */
 .about-hero {
-    background: linear-gradient(135deg, #1a7e5c 0%, #0f5738 100%);
-    color: white;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    color: #333;
     padding: 4rem 2rem;
     text-align: center;
 }
@@ -386,6 +386,7 @@ footer {
 .about-hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #C49A6C;
 }
 
 .about-hero p {
@@ -393,7 +394,7 @@ footer {
     line-height: 1.8;
     max-width: 700px;
     margin: 0 auto;
-    opacity: 0.95;
+    color: #666;
 }
 
 /* About Sections */
@@ -403,7 +404,7 @@ footer {
 
 .about-section h2 {
     font-size: 1.8rem;
-    color: #1a7e5c;
+    color: #C49A6C;
     margin-bottom: 1rem;
     margin-top: 0;
 }
@@ -435,13 +436,13 @@ footer {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #1a7e5c;
+    color: #C49A6C;
     font-weight: bold;
     font-size: 1.2rem;
 }
 
 .commitment-list strong {
-    color: #1a7e5c;
+    color: #C49A6C;
 }
 
 /* Vision & Mission Container */
@@ -458,13 +459,13 @@ footer {
     padding: 2.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-top: 4px solid #1a7e5c;
+    border-top: 4px solid #C49A6C;
 }
 
 .vision-card h2,
 .mission-card h2 {
     font-size: 1.5rem;
-    color: #1a7e5c;
+    color: #C49A6C;
     margin-bottom: 1rem;
     margin-top: 0;
 }
@@ -486,9 +487,9 @@ footer {
 }
 
 .contact-info-section {
-    background: linear-gradient(135deg, #1a7e5c 0%, #0f5738 100%);
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
     padding: 4rem 3rem;
-    color: white;
+    color: #333;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -497,14 +498,15 @@ footer {
 .contact-info-section h2 {
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
-    color: white;
+    color: #C49A6C;
+    font-weight: 600;
 }
 
 .contact-info-section p {
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 2rem;
-    opacity: 0.95;
+    color: #666;
 }
 
 .contact-detail {
@@ -519,22 +521,27 @@ footer {
     height: 24px;
     flex-shrink: 0;
     margin-top: 0.25rem;
+    color: #C49A6C;
+    fill: currentColor;
+}
+
+.contact-icon * {
+    fill: currentColor !important;
+}
+
+.contact-detail a,
+.contact-detail span {
+    color: #333;
+    font-size: 1rem;
 }
 
 .contact-detail a {
-    color: white;
     text-decoration: none;
-    font-size: 1rem;
     transition: opacity 0.3s ease;
 }
 
 .contact-detail a:hover {
     opacity: 0.8;
-}
-
-.contact-detail span {
-    color: white;
-    font-size: 1rem;
 }
 
 .contact-form-section {
@@ -576,8 +583,8 @@ footer {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #1a7e5c;
-    box-shadow: 0 0 0 3px rgba(26, 126, 92, 0.1);
+    border-color: #C49A6C;
+    box-shadow: 0 0 0 3px rgba(196, 154, 108, 0.1);
 }
 
 .form-group textarea {
@@ -587,7 +594,7 @@ footer {
 
 .submit-btn {
     padding: 0.75rem 2rem;
-    background-color: #1a7e5c;
+    background-color: #C49A6C;
     color: white;
     border: none;
     border-radius: 6px;
@@ -599,7 +606,7 @@ footer {
 }
 
 .submit-btn:hover {
-    background-color: #0f5738;
+    background-color: #A07D5A;
     transform: translateY(-2px);
 }
 
