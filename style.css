@@ -790,10 +790,15 @@ footer {
 @media (max-width: 768px) {
     .navbar {
         padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-logo {
+        margin-right: 1rem;
     }
 
     .nav-menu {
-        gap: 1rem;
+        gap: 1.5rem;
         flex-wrap: wrap;
     }
 
