@@ -707,6 +707,50 @@ footer {
     }
 }
 
+/* Fix Vision & Mission layout on smaller screens */
+@media (max-width: 768px) {
+    .vision-mission-container {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        align-items: stretch;
+    }
+
+    .vision-card,
+    .mission-card {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .vision-card h2,
+    .mission-card h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .vision-card p,
+    .mission-card p {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 480px) {
+    .vision-card,
+    .mission-card {
+        padding: 1rem;
+    }
+
+    .vision-card h2,
+    .mission-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .vision-mission-container {
+        gap: 1rem;
+    }
+}
+
 /* Tablet (768px and below) */
 @media (max-width: 768px) {
     .navbar {
