@@ -500,13 +500,16 @@ footer {
     background-color: #fff;
     padding: 2.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-top: 4px solid #C49A6C;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .vision-card h2,
 .mission-card h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #C49A6C;
     margin-bottom: 1rem;
     margin-top: 0;
@@ -514,10 +517,41 @@ footer {
 
 .vision-card p,
 .mission-card p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #666;
     line-height: 1.8;
     text-align: justify;
+}
+
+/* Make Visi/Misi visually match Product cards on smaller screens */
+@media (max-width: 768px) {
+    .vision-mission-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .vision-card,
+    .mission-card {
+        padding: 1.75rem;
+    }
+
+    .vision-card h2,
+    .mission-card h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vision-card,
+    .mission-card {
+        padding: 1.25rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+
+    .vision-card h2,
+    .mission-card h2 {
+        font-size: 1.2rem;
+    }
 }
 
 /* ================= CONTACT SECTION ================= */
