@@ -53,3 +53,27 @@ document.addEventListener('DOMContentLoaded', () => {
         .classList.add('active-link');
 
 });
+
+// =============================
+// NAVBAR TOGGLE (HAMBURGER)
+// =============================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('open');
+            navMenu.classList.toggle('open');
+        });
+
+        // Close menu when a nav link is clicked
+        document.querySelectorAll('.nav-menu a').forEach(a => {
+            a.addEventListener('click', () => {
+                navToggle.classList.remove('open');
+                navMenu.classList.remove('open');
+            });
+        });
+    }
+});

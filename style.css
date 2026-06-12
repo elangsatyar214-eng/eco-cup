@@ -69,6 +69,50 @@ header {
     padding-bottom: 0.25rem;
 }
 
+/* Hamburger toggle button */
+.nav-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none; /* shown on small screens */
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #333;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle .hamburger::before {
+    transform: translateY(-7px);
+}
+
+.nav-toggle .hamburger::after {
+    transform: translateY(5px);
+}
+
+.nav-toggle.open .hamburger {
+    background: transparent;
+}
+
+.nav-toggle.open .hamburger::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.open .hamburger::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* ================= MAIN CONTENT ================= */
 main {
     min-height: calc(100vh - 200px);
@@ -128,19 +172,6 @@ main {
     text-align: justify;
     line-height: 1.8;
     letter-spacing: 0.3px;
-}
-
-/* ================= PAGE CONTENT ================= */
-.page-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
-}
-
-.page-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #C49A6C;
 }
 
 .page-content h2 {
@@ -615,6 +646,56 @@ footer {
 }
 /* ================= RESPONSIVE DESIGN ================= */
 
+/* ================= DID YOU KNOW SUBSECTION ================= */
+.about-subsection.did-you-know {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-top: 1.25rem;
+}
+
+.did-you-know-images {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.did-you-know-images .info-image {
+    width: 49%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    display: block;
+}
+
+/* Make sure images never overflow their container */
+.info-image {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .did-you-know-images {
+        gap: 0.75rem;
+    }
+    .did-you-know-images .info-image {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .did-you-know-images {
+        flex-direction: column;
+    }
+    .did-you-know-images .info-image {
+        width: 100%;
+    }
+}
+
 /* Tablet (768px and below) */
 @media (max-width: 768px) {
     .navbar {
@@ -704,178 +785,3 @@ footer {
     }
 }
 
-/* Mobile (480px and below) */
-@media (max-width: 480px) {
-    .navbar {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 0.75rem;
-    }
-
-    .nav-menu {
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-menu a {
-        display: block;
-        padding: 0.5rem;
-        font-size: 0.85rem;
-    }
-
-    .hero-logo {
-        width: 200px;
-        height: 200px;
-    }
-
-    .hero-container {
-        min-height: 300px;
-        padding: 1.5rem 1rem;
-    }
-
-    .hero-container h1 {
-        font-size: 1.5rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .hero-container p {
-        font-size: 0.85rem;
-        max-width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    .page-content {
-        padding: 1.5rem 1rem;
-    }
-
-    .page-content h1 {
-        font-size: 1.5rem;
-    }
-
-    .page-content h2 {
-        font-size: 1.2rem;
-        margin-top: 1.5rem;
-    }
-
-    .page-content p {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-    }
-
-    .product-card {
-        padding: 1.5rem;
-    }
-
-    .product-card h3 {
-        font-size: 1.1rem;
-    }
-
-    .product-card p {
-        font-size: 0.85rem;
-    }
-
-    .benefit-card {
-        padding: 1.5rem;
-    }
-
-    .benefit-card h3 {
-        font-size: 1.1rem;
-    }
-
-    .benefit-card p {
-        font-size: 0.85rem;
-    }
-
-    .showcase-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .showcase-description h2 {
-        font-size: 1.5rem;
-    }
-
-    .showcase-description p {
-        font-size: 0.9rem;
-    }
-
-    .team-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .team-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .team-card h3 {
-        font-size: 1rem;
-    }
-
-    .contact-container {
-        grid-template-columns: 1fr;
-        min-height: auto;
-    }
-
-    .contact-info-section {
-        padding: 2rem 1.5rem;
-    }
-
-    .contact-info-section h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .contact-info-section p {
-        font-size: 0.9rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .contact-form-section {
-        padding: 2rem 1.5rem;
-    }
-
-    .form-group label {
-        font-size: 0.9rem;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        font-size: 0.9rem;
-    }
-
-    .team-card {
-        padding: 1.5rem;
-    }
-
-    .team-card h3 {
-        font-size: 1rem;
-    }
-
-    .team-card p {
-        font-size: 0.8rem;
-    }
-
-    .footer-container {
-        padding: 1rem;
-        gap: 1rem;
-    }
-
-    .footer-left h3,
-    .footer-right h3 {
-        font-size: 1rem;
-    }
-
-    .footer-left p,
-    .footer-right p {
-        font-size: 0.85rem;
-    }
-
-    .footer-bottom {
-        padding: 1rem;
-        font-size: 0.8rem;
-    }
-}
