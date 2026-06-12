@@ -37,7 +37,7 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 1rem 2rem;
     max-width: 1200px;
@@ -60,6 +60,7 @@ header {
     display: flex;
     list-style: none;
     gap: 2rem;
+    margin-left: auto;
 }
 
 .nav-menu a {
