@@ -853,8 +853,17 @@ footer {
     }
 
     .team-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    .team-card {
+        padding: 1.5rem;
+    }
+
+    .team-photo {
+        width: 120px;
+        height: 120px;
     }
 
     .contact-container {
